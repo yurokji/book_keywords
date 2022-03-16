@@ -44,17 +44,9 @@ for line in lines:
 
 stopwords = nltk.corpus.stopwords.words("english")
 stopwords = list(set(stopwords))
-# newStopWords = ["jews","people", "br", "href", "jew", "could", "would", "even", "germany", "since", "one", "eichmanns", "thing",  "upon", "something", "therefore", "can", "say", "tell", "cannot", "able", "things", "gutenberg", "http",
-# "www", "httpwwwidphnet", "IDPH", "may", "also", "Ye", "Henricks", "Te", "Lao", "Tzu", "Ching", "Te Ching", "taoist", "chapter", "translation", "version", "chapters", "translations", "English", "interpretation"]
+newStopWords = ["jews","people", "br", "href", "jew", "may", "might", "should", "have", "has", "had", "make", "making", "made", "get", "getting", "gotten", "become", "became", "can", "can\'t", "cannot", "did", "do", "dont", "don\'t", "does", "doesn\'t",  "done", "haven\'t", "could", "couldn\'t", "would", "wouldn\'t", "even", "germany", "since", "one", "eichmanns", "thing",  "upon", "something", "therefore", "thus", "otherwise", "consequently", "long", "short", "people", "man", "men", "person", "while", "can", "say", "tell", "cannot", "able", "things", "gutenberg", "http", "page", "www", "httpwwwidphnet", "IDPH", "may", "also", "Ye", "Section", "chapter", "translation", "version", "chapters", "translations", "English", "interpretation"]
 
-# stopwords.extend(newStopWords)
-# wc = WordCloud(width=1000, height=600, background_color="white", random_state=0)
-
-
-
-
-
-
+stopwords.extend(newStopWords)
 wordcloud = WordCloud(width=2560, height=1440, background_color="black", random_state=0, \
     max_words=150, stopwords=stopwords).generate(text)
 plt.imshow(wordcloud, interpolation='bilinear')
